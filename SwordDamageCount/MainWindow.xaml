@@ -1,0 +1,30 @@
+﻿<Window x:Class="SwordDamageCount.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:SwordDamageCount"
+        mc:Ignorable="d"
+        Title="攻擊傷害" Height="600" Width="800">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        
+        <CheckBox x:Name="flameSword" Content="附加火焰攻擊" HorizontalAlignment="Center" VerticalAlignment="Center" Checked="flameSword_Checked" Unchecked="flameSword_Unchecked" FontSize="36"/>
+        
+        <CheckBox x:Name="magic" Content="附加魔法攻擊" Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Center" Checked="magic_Checked" Unchecked="magic_Unchecked" FontSize="36"/>
+        
+        <Button Content="擲3個骰子計算普通攻擊" Margin="60,10" Grid.Row="1" Grid.ColumnSpan="2" Click="Button_Click" FontSize="36"/>
+        
+        <TextBlock x:Name="totalDamage" HorizontalAlignment="Center" Grid.Row="2" Text="總傷害" VerticalAlignment="Center" Grid.ColumnSpan="2" FontSize="48"/>
+
+    </Grid>
+</Window>
